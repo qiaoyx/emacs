@@ -3,7 +3,8 @@
 
 (require 'linum-ace)
 (setq linum-format 'linum-ace)
-(global-set-key [(meta ?.)]  'linum-ace-jump)
+                                        ;(global-set-key [(meta ?.)]  'linum-ace-jump)
+(global-set-key [(meta ?.)]  'ace-jump-line-mode)
 
                                         ;(global-set-key (kbd "C-;") 'ace-jump-mode)
                                         ;(global-set-key (kbd "C-:") 'ace-jump-word-mode)

@@ -1,7 +1,7 @@
 (setq load-path (cons "/usr/local/share/emacs/site-lisp" load-path))
 
 (load "auctex.el" nil t t)
-(load "preview-latex.el" nil t t)
+;(load "preview-latex.el" nil t t)
 (setq TeX-auto-save t)
 (setq TeX-parse-self t)
 (setq-default TeX-master nil)
@@ -70,5 +70,8 @@
 
 ;; 添加索引菜单
 ;;(imenu-add-menubar-index)
+
+(setq org-export-latex-listings t)
+(setq org-export-collect-listings t)
 
 (provide 'init-auctex)

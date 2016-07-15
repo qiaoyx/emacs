@@ -60,7 +60,7 @@
 (require 'init-ace)
 (require 'init-frame-hooks)
 (require 'init-xterm)
-(require 'init-themes)
+;(require 'init-themes)
 (require 'init-osx-keys)
 (require 'init-gui-frames)
 (require 'init-dired)
@@ -139,7 +139,7 @@
 (require 'google-c-style)
 (require 'company-ycmd)
 (company-ycmd-setup)
-(set-variable 'ycmd-server-command '("python" "/root/.emacs.d/ycmd/ycmd"))
+(set-variable 'ycmd-server-command '("python" "/home/qiaoyx/.emacs.d/ycmd/ycmd"))
 ;;(set-variable 'ycmd-extra-conf-whitelist '("~/work/cppwizard/console/*"))
 
 ;;(require 'auto-complete-ycmd)
@@ -152,6 +152,8 @@
 (flycheck-ycmd-setup)
 
 (require 'init-auctex)
+
+(require 'init-scheme)
 
 ;; Extra packages which don't require any configuration
 
@@ -212,6 +214,25 @@
  "eim-py" "euc-cn" 'eim-use-package
  "拼音" "汉语拼音输入法" "py.txt")
 (setq default-input-method "eim-py")
+
+;; Chinese Font
+;;(dolist (charset '(kana han symbol cjk-misc bopomofo))
+;;  (set-fontset-font (frame-parameter nil 'font)
+;;                    charset
+;;                    (font-spec :family "Adobe Song" :size 12)))
+
+;; org-mode font
+(defun my-org-mode-face()
+  (interactive)
+  (setq buffer-face-mode-face '(:family "NSimSun 12" ))
+  (buffer-face-mode))
+(add-hook 'org-mode-hook 'my-org-mode-face)
+
+
+                                        ;(require 'to-latex)
+(eval-after-load 'company
+  '(add-to-list 'company-backends 'company-omnisharp))
+(add-hook 'csharp-mode-hook 'omnisharp-mode)
 
 
 (provide 'init)

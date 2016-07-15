@@ -329,6 +329,9 @@ typical word processor."
     (define-key org-mode-map (kbd "M-h") nil)
     (define-key org-mode-map (kbd "C-c g") 'org-mac-grab-link)))
 
+;(require 'plantuml-mode)
+(setq org-plantuml-jar-path "/home/qiaoyx/.emacs.d/plantuml.jar")
+
 (after-load 'org
   (org-babel-do-load-languages
    'org-babel-load-languages
@@ -340,6 +343,7 @@ typical word processor."
      (haskell . nil)
      (latex . t)
      (ledger . t)
+     (plantuml . t)
      (ocaml . nil)
      (octave . t)
      (python . t)
@@ -349,5 +353,6 @@ typical word processor."
      (sql . nil)
      (sqlite . t))))
 
+(setq org-src-fontify-natively t)
 
 (provide 'init-org)
