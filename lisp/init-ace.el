@@ -4,7 +4,7 @@
 (require 'linum-ace)
 (setq linum-format 'linum-ace)
                                         ;(global-set-key [(meta ?.)]  'linum-ace-jump)
-(global-set-key [(meta ?.)]  'ace-jump-line-mode)
+(global-set-key [(meta ?.)]  'ace-jump-mode)
 
                                         ;(global-set-key (kbd "C-;") 'ace-jump-mode)
                                         ;(global-set-key (kbd "C-:") 'ace-jump-word-mode)
@@ -16,7 +16,7 @@
         ace-jump-line-mode ; C-u C-c SPC
         ace-jump-char-mode)) ; C-u C-u C-c SPC
 ;; you can select the key you prefer to
-(global-set-key (kbd "M-l") 'ace-jump-mode)
+(global-set-key (kbd "M-l") 'ace-jump-line-mode)
 
 (global-set-key "\C-cn" 'linum-mode)
 (global-set-key "\C-cf" 'next-buffer)

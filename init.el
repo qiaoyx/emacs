@@ -137,8 +137,8 @@
 
 (require 'ycmd)
 (require 'google-c-style)
-(require 'company-ycmd)
-(company-ycmd-setup)
+;;(require 'company-ycmd)
+;;(company-ycmd-setup)
 (set-variable 'ycmd-server-command '("python" "/home/qiaoyx/.emacs.d/ycmd/ycmd"))
 ;;(set-variable 'ycmd-extra-conf-whitelist '("~/work/cppwizard/console/*"))
 
@@ -154,6 +154,8 @@
 (require 'init-auctex)
 
 (require 'init-scheme)
+
+(require 'ox-freemind)
 
 ;; Extra packages which don't require any configuration
 
@@ -202,6 +204,7 @@
   (setq user-full-name "qiaoyx")
   (setq user-mail-address "qiaoyx@hotmail.com")
   (ycmd-mode t)
+  (doxymacs-mode t)
   (hs-minor-mode t)
   (c-set-style "stroustrup")
   (whitespace-cleanup-mode t))

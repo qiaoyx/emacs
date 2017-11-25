@@ -1,9 +1,9 @@
-;; loading yasnippet will slow the startup
-;; but it's necessary cost
+;;; loading yasnippet will slow the startup
+;;; but it's necessary cost
 (require 'yasnippet)
 
-;; my private snippets, should be placed before enabling yasnippet
-(setq my-yasnippets (expand-file-name "~/my-yasnippets"))
+;;; my private snippets, should be placed before enabling yasnippet
+(setq my-yasnippets (expand-file-name "../snippets"))
 (if (and  (file-exists-p my-yasnippets) (not (member my-yasnippets yas-snippet-dirs)))
     (add-to-list 'yas-snippet-dirs my-yasnippets))
 
