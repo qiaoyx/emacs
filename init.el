@@ -106,7 +106,7 @@
 (require 'init-csv)
 (require 'init-erlang)
 (require 'init-javascript)
-(require 'init-php)
+;;(require 'init-php)
 (require 'init-org)
 (require 'init-nxml)
 (require 'init-html)
@@ -137,7 +137,7 @@
 
 (require 'ycmd)
 (require 'google-c-style)
-;;(require 'company-ycmd)
+(require 'company-ycmd)
 ;;(company-ycmd-setup)
 (set-variable 'ycmd-server-command '("python" "/home/qiaoyx/.emacs.d/ycmd/ycmd"))
 ;;(set-variable 'ycmd-extra-conf-whitelist '("~/work/cppwizard/console/*"))
@@ -155,7 +155,7 @@
 
 (require 'init-scheme)
 
-(require 'ox-freemind)
+;;(require 'ox-freemind)
 
 ;; Extra packages which don't require any configuration
 

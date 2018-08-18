@@ -1,3 +1,5 @@
+;;; org-mode:
+
 (when (< emacs-major-version 24)
   (require-package 'org))
 (require-package 'org-fstree)
@@ -82,6 +84,7 @@ typical word processor."
       (visual-line-mode -1))))
 
 ;;(add-hook 'org-mode-hook 'buffer-face-mode)
+(add-hook 'dired-mode-hook 'org-download-enable)
 
 
 (setq org-support-shift-select t)
@@ -342,7 +345,7 @@ typical word processor."
      (dot . t)
      (emacs-lisp . t)
      (gnuplot . t)
-     (haskell . nil)
+     (haskell . t)
      (latex . t)
      (ledger . t)
      (plantuml . t)
@@ -356,5 +359,4 @@ typical word processor."
      (sqlite . t))))
 
 (setq org-src-fontify-natively t)
-
 (provide 'init-org)
